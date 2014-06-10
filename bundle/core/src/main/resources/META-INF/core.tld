@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/javaee" version="2.1">
+    <tlib-version>5.4.0-SNAPSHOT</tlib-version>
+    <short-name>SWX Java Core Tag Library</short-name>
+    <uri>https://github.com/Siteworx/swx-AEMPatternsAndPractices</uri>
+    
+    <tag>
+        <name>loadSitemap</name>
+        <tag-class>com.swx.core.tags.LoadSitemapTag</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>var</name>
+            <description>The variable name to set the sitemap bean into.</description>
+            <type>java.lang.String</type>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>depth</name>
+            <description>The depth to perform the sitemap.</description>
+            <type>int</type>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>numColumns</name>
+            <description>The number of columns to be used for sorting. Must be at least 1.</description>
+            <type>int</type>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+        	<name>parent</name>
+            <description>The parent page for the sitemap.</description>
+            <type>com.day.cq.wcm.api.Page</type>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    
+    <tag>
+        <name>a</name>
+        <tag-class>com.swx.core.tags.AnchorTag</tag-class>
+        <body-content>scriptless</body-content>
+        <dynamic-attributes>true</dynamic-attributes>
+        <attribute>
+            <name>href</name>
+            <description>A repository path or external URL. If this is an invalid repository path, null, or empty, the wrapper tag will not render.</description>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+</taglib>

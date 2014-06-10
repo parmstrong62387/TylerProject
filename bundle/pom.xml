@@ -1,0 +1,172 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.swx</groupId>
+    <artifactId>parent</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+    <name>SWX Parent</name>
+
+    <modules>
+        <module>core</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <version.maven>2.0.7</version.maven>
+        <version.java>1.6</version.java>
+        <version.cq>5.4.0</version.cq>
+
+        <skip.deploy>true</skip.deploy>
+
+        <!-- CQ 5 deployment parameters -->
+        <deploy.username>admin</deploy.username>
+        <deploy.password>admin</deploy.password>
+        <deploy.url>http://localhost:4502</deploy.url>
+    </properties>
+
+    <profiles>
+        <profile>
+            <id>local-author</id>
+            <properties>
+                <deploy.url>http://localhost:4502</deploy.url>
+                <skip.deploy>false</skip.deploy>
+            </properties>
+        </profile>
+        <profile>
+           	<id>local-publish</id>
+            <properties>
+                <deploy.url>http://localhost:4503</deploy.url>
+                <skip.deploy>false</skip.deploy>
+            </properties>
+            
+        </profile>
+    </profiles>
+
+
+    <repositories>
+        <repository>
+            <id>Adobe-Main</id>
+            <url>http://repo.adobe.com/nexus/content/groups/public</url>
+        </repository>
+        <repository>
+            <id>Maven-Central</id>
+            <url>http://repo1.maven.org/maven2/</url>
+        </repository>
+    </repositories>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>2.5</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>2.6</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.0</version>
+                    <configuration>
+                        <source>${version.java}</source>
+                        <target>${version.java}</target>
+                        <encoding>${project.build.sourceEncoding}</encoding>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.felix</groupId>
+                    <artifactId>maven-scr-plugin</artifactId>
+                    <version>1.7.4</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>2.4</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.cognifide.maven.plugins</groupId>
+                    <artifactId>maven-crx-plugin</artifactId>
+                    <version>1.0.0</version>
+                    <configuration>
+                        <url>${deploy.url}</url>
+                        <user>${deploy.username}</user>
+                        <password>${deploy.password}</password>
+                        <force>true</force>
+                        <skip>${skip.deploy}</skip>
+                        <packageFileName>${project.build.directory}/${project.build.finalName}-src.zip</packageFileName>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>2.4</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.felix</groupId>
+                    <artifactId>maven-bundle-plugin</artifactId>
+                    <version>2.3.7</version>
+                    <extensions>true</extensions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.sling</groupId>
+                    <artifactId>maven-sling-plugin</artifactId>
+                    <version>2.1.0</version>
+                    <configuration>
+                        <slingUrl>${deploy.url}/system/console/install</slingUrl>
+                        <user>${deploy.username}</user>
+                        <password>${deploy.password}</password>
+                        <bundleStart>true</bundleStart>
+                        <skip>${skip.deploy}</skip>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>1.2</version>
+                <executions>
+                    <execution>
+                        <id>enforce-java</id>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <requireMavenVersion>
+                                    <message>Project must be built with Maven ${version.maven} or higher</message>
+                                    <version>${version.maven}</version>
+                                </requireMavenVersion>
+                                <requireJavaVersion>
+                                    <message>Project must be compiled with Java ${version.java} or higher</message>
+                                    <version>${version.java}</version>
+                                </requireJavaVersion>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencyManagement>
+		<dependencies>
+			<dependency>
+				<!-- use com.day.cq.wcm as groupId if you are using an AEM version previous to 5.5 -->
+				<groupId>com.day.cq</groupId>
+				<artifactId>cq-quickstart-product-dependencies</artifactId>
+				<version>5.6.1</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+</project>

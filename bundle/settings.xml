@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+	<!-- This is the configuration file for the Model A build -->
+	<!-- For an explanation, see: http://maven.apache.org/settings.html -->
+
+	<interactiveMode>false</interactiveMode>
+	<profiles>
+		<profile>
+			<id>custom-property-values</id>
+			<properties>
+				<!--CQ.LOCALHOST>http://localhost:4502</CQ.LOCALHOST>
+				<CQ.USER>admin</CQ.USER>
+				<CQ.PASS>admin</CQ.PASS-->
+			</properties>
+		</profile>
+	</profiles>
+
+</settings>
