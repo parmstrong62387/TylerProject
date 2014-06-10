@@ -1,0 +1,310 @@
+/* Tyrant Unleashed Wiki CSS */
+body {
+margin-left: auto;
+margin-right: auto;
+width: 1100px;
+background-image:url('Images/background.jpg');
+font-family: "Arial";
+position:relative;
+}
+
+div.left {
+float: left;
+}
+
+div.header {
+background-color: #B2B2B2;
+height: 90px;
+width: 1100px;
+line-height: 8px;
+border-style: solid;
+border-width: medium;
+}
+
+div.logo {
+width: 16%;
+text-align: center;
+padding: 5.5px;
+float: left;
+}
+
+#pagetitle { 
+font-weight: bold; 
+font-size: 2.2em;
+padding-top: 19px;
+padding-left: 6px;
+float: left;
+}
+a.title:link { color:black; text-decoration:none;}
+a.title:visited { color:black; text-decoration:none;}
+a.title:hover { color: black; text-decoration:none;}
+
+div.getit { 
+font-weight: bold; 
+font-size: 1.58em;
+padding: 17px;
+float: left;
+margin-left: 63px;
+margin-top: 1px;
+}
+
+div.download {
+text-align: center;
+float: left;
+margin-top: 2px;
+}
+
+div.topmenu { 
+padding: 11px;
+padding-left: 0;
+float: left;
+}
+
+#search input[type="text"] {
+background: url('Images/search-white.png') no-repeat 10px 6px #000000;
+border: 1px solid #000000;
+font: bold 12px Arial;
+width: 220px;
+padding: 6px 15px 8px 37px;
+border-radius: 20px;
+color: #bebebe;
+margin-top: 10px;
+margin-left: 76px;
+}
+
+#footer {
+background-color: #B2B2B2;
+height: 60px;
+line-height: 30px;
+width: 1100px;
+border-style: solid;
+border-width: medium;
+float: left;
+margin-top: 1px;
+}
+#footer .konglogo {
+width: 462px;
+text-align: right;
+padding: 2px;
+float: left;
+}
+#footer .synlogo {
+width: 176px;
+text-align: center;
+padding: 2px;
+margin-top: 1px;
+float: left;
+}
+
+#cardlist {
+border-collapse: collapse;
+border: 1px solid black;
+text-align:left;
+min-width: 140px;
+background-color: #DADADE;
+margin-right: 10px;
+margin-top: 10px;
+font-size:0.875em;
+}
+#cardlist .tableheader {
+text-align: center;
+padding: 5px;
+background-color: #BDBDC1;
+}
+
+#missionlist {
+text-align:left;
+border-collapse: collapse;
+}
+#missionlist td {
+padding-right: 10px;
+padding-bottom: 5px;
+}
+
+#cardstats {
+border: 1px solid black;
+text-align:center;
+background-color: #DADADE;
+margin-right: 10px;
+margin-top: 10px;
+margin-bottom: 10px;
+font-size:0.875em;
+float: left;
+}
+#cardstats .tableheader {
+border: 1px solid black;
+text-align: center;
+min-width: 80px;
+background-color: #BDBDC1;
+}
+#cardstatsinner td { /*NEEDS BETTER NAME*/
+border: 1px solid black;
+min-width: 100px;
+}
+
+#cardinfotable {
+border: 1px solid black;
+text-align:center;
+background-color: #DADADE;
+margin-right: 10px;
+margin-top: 10px;
+margin-bottom: 10px;
+font-size:0.875em;
+float: left;
+}
+#cardinfotable .tableheader {
+border: 1px solid black;
+text-align: center;
+min-width: 50px;
+background-color: #BDBDC1;
+}
+#cardinfotableinner td {
+border: 1px solid black;
+}
+
+#bossdeck {
+border: 1px solid black;
+text-align:center;
+background-color: #DADADE;
+margin-right: 10px;
+margin-top: 10px;
+margin-bottom: 10px;
+font-size:0.875em;
+float: left;
+}
+#bossdeck .tableheader {
+border: 1px solid black;
+text-align: center;
+min-width: 80px;
+background-color: #BDBDC1;
+}
+#cardlevel { /*NEEDS BETTER NAME*/
+border: 1px solid black;
+}
+
+#cardimglevels {
+text-align:left;
+border-collapse: collapse;
+}
+#cardimglevels td {
+padding-right: 5px;
+padding-bottom: 0px;
+}
+
+ul#menu li {
+display: inline;
+}
+
+ul#linklist {
+list-style-type: none;
+margin: 0;
+padding-top: 5px;
+padding-right: 5px;
+padding-bottom: 0;
+padding-left: 5px;
+}
+
+#skilldescription {
+max-width: 700px;
+list-style-type: none;
+margin: 0;
+padding-top: 20px;
+padding-right: 5px;
+padding-bottom: 0;
+padding-left: 20px;
+}
+
+a.link:link { color:black; }
+a.link:visited { color:black; }
+a.link:hover { color: #520303; }
+
+/* This button was created with aid from CSSButtonGenerator.com */
+.button {
+background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ebebeb), color-stop(1, #adadad) );
+background:-moz-linear-gradient( center top, #ebebeb 5%, #adadad 100% );
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebebeb', endColorstr='#adadad');
+background-color:#ebebeb;
+border:1px solid #000000;
+display:inline-block;
+color:#000000;
+font-size:12px;
+font-weight:bold;
+font-style:normal;
+height:27px;
+line-height:27px;
+width:100px;
+text-decoration:none;
+text-align:center;
+}
+.button:hover {
+background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #adadad), color-stop(1, #ebebeb) );
+background:-moz-linear-gradient( center top, #adadad 5%, #ebebeb 100% );
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#adadad', endColorstr='#ebebeb');
+background-color:#adadad;
+}
+
+/* Creates 2 columns for leftnav and content */
+#container-outer {
+float:left;
+overflow: hidden;
+border-style: solid;
+border-width: medium;
+width: 1100px;
+}
+#container-inner {
+float:left;
+background-color: #B2B2B2;
+position: relative;
+right:800px;
+}
+#sidebar {
+float: left;
+width: 174px;
+position: relative;
+left: 800px;
+}
+#content {
+float: left;
+width: 876px;
+position: relative;
+left: 800px;
+background-color: #B2B2B2;
+padding: 25px;
+min-height: 563px;
+}
+
+/*Styling for the individual modules*/
+div.leftnav {
+border-style: solid;
+border-width: medium;
+border-top: 0;
+border-left: 0;
+float: left;
+background-color: #C8C8CC;
+}
+div.leftnavcont {
+padding: 12px;
+margin-left: 10px;
+margin-right: 10px;
+}
+div.leftnavcont dt{
+padding-bottom: 5px;
+font-weight: bold;
+font-size: .950em;
+}
+div.leftnavcont dd{
+margin-left: 15px;
+padding-bottom: 5px;
+font-size: .875em;
+}
+
+div.title { 
+font-weight: bold; 
+font-size: 1.7em;
+text-decoration:underline;
+max-width: 300px;
+}
+
+p.paragraph {
+font-size: 0.875em;
+}
