@@ -3,13 +3,8 @@
 <properties>
 <comment>FileVault Package Properties</comment>
 <entry key="createdBy">admin</entry>
-<<<<<<< HEAD
-<entry key="name">TUWiki 6-11-14</entry>
-<entry key="lastModified">2014-06-11T16:36:39.711-04:00</entry>
-=======
 <entry key="name">Tyler-Project</entry>
 <entry key="lastModified">2014-06-11T15:05:28.125-04:00</entry>
->>>>>>> 6b03267bf0b39044e505db509b3b6fc5639bd094
 <entry key="lastModifiedBy">admin</entry>
 <entry key="created">2014-06-11T16:36:40.226-04:00</entry>
 <entry key="buildCount">10</entry>
