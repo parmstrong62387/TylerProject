@@ -1,7 +1,5 @@
 <%@include file="/libs/foundation/global.jsp"%><%
-%><%@ page import="java.util.Iterator,
-        com.day.cq.wcm.api.PageFilter,
-    	com.swx.core.leftnav.LeftNav"%>
+%><%@ page import="com.swx.core.leftnav.LeftNav"%>
 
 <% pageContext.setAttribute("leftNav", new LeftNav(currentPage)); %>
 <div class="leftnavcont"> 

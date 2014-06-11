@@ -7,12 +7,12 @@ public class LeftNavItem {
 	private String link, title;
 	public LeftNavItem(Page page, int x) {
 		title = page.getTitle();
-		link = page.getPath();
+		link = page.getPath() + ".html";
 		level = x;
 	}
 	
 	public String getLink() {
-		return link + ".html";
+		return link;
 	}
 	
 	public int getLevel() {
