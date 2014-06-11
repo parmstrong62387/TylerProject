@@ -7,19 +7,19 @@
 --%><%
 %><%@include file="/libs/foundation/global.jsp"%><%
 %><%@ page import="java.util.Iterator,
-        com.day.cq.wcm.api.PageFilter"%>
-<div class="leftnavcont"> <dl>
-<%  Page root = currentPage.getAbsoluteParent(1);
-    if (root != null) {
-        Iterator<Page> children = root.listChildren();
-        while (children.hasNext()) {
-            Page child = children.next();
-            String title = child.getTitle() == null ? child.getName() : child.getTitle();%>
-<dt><a href="<%= child.getPath() %>.html" class="link"><b><%= title %></b></a></dt>
-		 <% Iterator<Page> childrenofchildren = child.listChildren();
-        	while (childrenofchildren.hasNext()) {
-            	Page superchild = childrenofchildren.next();
-            	String childtitle = superchild.getTitle() == null ? superchild.getName() : superchild.getTitle();%>
-				<dd><a href="<%= superchild.getPath() %>.html" class="link"><%= childtitle %></a></dd>
-<%}}}%>
-</dl></div>
+        com.day.cq.wcm.api.PageFilter,
+    	com.swx.core.leftnav.*"%>
+
+<% pageContext.setAttribute("leftNav", new LeftNav(currentPage)); %>
+<div class="leftnavcont"> 
+<c:forEach items="${leftNav.items}" var="leftNavItem">
+<c:if test="${leftNavItem.level == 0}"> 
+    <h6> <a href="${leftNavItem.link}" class="link">${leftNavItem.title}</a> </h6>
+</c:if>
+<ul>
+<c:if test="${leftNavItem.level == 1}">
+    <li><a href="${leftNavItem.link}" class="link">${leftNavItem.title}</a></li>
+</c:if>
+</ul>
+</c:forEach>
+</div>

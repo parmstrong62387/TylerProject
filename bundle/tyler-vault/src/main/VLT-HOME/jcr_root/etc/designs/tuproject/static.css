@@ -284,17 +284,30 @@ background-color: #C8C8CC;
 }
 div.leftnavcont {
 padding: 12px;
-margin-left: 10px;
-margin-right: 10px;
+margin-left: 5px;
+margin-right: 5px;
 }
-div.leftnavcont dt{
+h6 {
+margin:0;
+padding-left: 5px;
+padding-right: 5px;
 padding-bottom: 5px;
+padding-top: 5px;
 font-weight: bold;
 font-size: .950em;
 }
-div.leftnavcont dd{
+div.leftnavcont ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+div.leftnavcont li {
+list-style-type: none;
 margin-left: 15px;
-padding-bottom: 5px;
+margin-right: 10px;
+margin-bottom: 5px;
+margin-top: 0;
+padding:0;
 font-size: .875em;
 }
 

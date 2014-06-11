@@ -3,16 +3,16 @@
 <properties>
 <comment>FileVault Package Properties</comment>
 <entry key="createdBy">admin</entry>
-<entry key="name">TUWiki 6-10-14</entry>
-<entry key="lastModified">2014-06-10T17:02:37.227-04:00</entry>
+<entry key="name">TUWiki 6-11-14</entry>
+<entry key="lastModified">2014-06-11T14:39:39.288-04:00</entry>
 <entry key="lastModifiedBy">admin</entry>
-<entry key="created">2014-06-10T17:02:39.985-04:00</entry>
-<entry key="buildCount">1</entry>
-<entry key="version">1.0</entry>
+<entry key="created">2014-06-11T14:39:39.990-04:00</entry>
+<entry key="buildCount">4</entry>
+<entry key="version"/>
 <entry key="dependencies"/>
 <entry key="packageFormatVersion">2</entry>
 <entry key="group">my_packages</entry>
-<entry key="lastWrapped">2014-06-10T17:02:37.227-04:00</entry>
+<entry key="lastWrapped">2014-06-11T14:39:39.288-04:00</entry>
 <entry key="description"/>
 <entry key="lastWrappedBy">admin</entry>
 </properties>
