@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Dialog"
-    title="Title Dialog"
+    height="200"
+    width="600"
     xtype="dialog">
     <items
-        jcr:primaryType="cq:Widget"
+        jcr:primaryType="nt:unstructured"
         xtype="tabpanel">
-        <items jcr:primaryType="cq:WidgetCollection">
-            <tab1
-                jcr:primaryType="cq:Panel"
-                title="Edit Title">
-                <items jcr:primaryType="cq:WidgetCollection">
-                    <prop4
-                        jcr:primaryType="nt:unstructured"
-                        emptyText="Insert Title Here"
-                        fieldLabel="Title"
-                        fieldSubLabel="(Title of Page)"
-                        validateOnBlur="true"
-                        xtype="textfield"/>
-                </items>
-            </tab1>
+        <items
+            jcr:primaryType="nt:unstructured"
+            title="Edit Wiki Page Title"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <title
+                    jcr:primaryType="nt:unstructured"
+                    blankText="Insert Wiki Page Title Here"
+                    fieldLabel="Wiki Page Title"
+                    name="./wikiPageTitle"
+                    validateOnBlur="true"
+                    xtype="textfield"/>
+            </items>
         </items>
     </items>
 </jcr:root>

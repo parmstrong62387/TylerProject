@@ -45,8 +45,9 @@
   mixin
   - cq:tags (string) multiple
 
-[cq:Panel] > cq:Widget
-  orderable
+[sling:Resource]
+  mixin
+  - sling:resourceType (string)
 
 [cq:Widget] > nt:unstructured
   orderable
@@ -58,10 +59,6 @@
 [cq:WidgetCollection] > nt:unstructured
   orderable
   + * (cq:Widget) = cq:Widget
-
-[sling:Resource]
-  mixin
-  - sling:resourceType (string)
 
 [rep:RepoAccessControllable]
   mixin

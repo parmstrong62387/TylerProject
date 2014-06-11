@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:vlt="http://www.day.com/jcr/vault/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:created="{Date}2014-06-11T16:01:00.891-04:00"
+    jcr:created="{Date}2014-06-11T16:36:39.711-04:00"
     jcr:createdBy="admin"
     jcr:description=""
-    jcr:lastModified="{Date}2014-06-11T16:01:00.891-04:00"
+    jcr:lastModified="{Date}2014-06-11T16:36:39.711-04:00"
     jcr:lastModifiedBy="admin"
     jcr:primaryType="vlt:PackageDefinition"
-    buildCount="7"
+    buildCount="10"
     builtWith="Adobe CQ-5.6.0.20130125"
+    fixedBugs=""
     group="my_packages"
-    lastUnwrapped="{Date}2014-06-11T16:01:00.891-04:00"
+    lastUnwrapped="{Date}2014-06-11T16:36:39.711-04:00"
     lastUnwrappedBy="admin"
-    lastWrapped="{Date}2014-06-11T16:01:00.891-04:00"
+    lastWrapped="{Date}2014-06-11T16:36:39.711-04:00"
     lastWrappedBy="admin"
     name="TUWiki 6-11-14"
-    version="">
+    providerLink=""
+    providerName=""
+    providerUrl=""
+    testedWith=""
+    version="0.1.1">
     <filter jcr:primaryType="nt:unstructured">
         <f0
             jcr:primaryType="nt:unstructured"
@@ -27,4 +32,5 @@
             root="/etc/designs/tuproject"
             rules="[]"/>
     </filter>
+    <screenshots jcr:primaryType="nt:unstructured"/>
 </jcr:root>
