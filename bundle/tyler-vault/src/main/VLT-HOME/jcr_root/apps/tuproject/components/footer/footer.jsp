@@ -1,11 +1,4 @@
-<%--
-
-  Header component.
-
-  Header for tuproject
-
---%><%
-%><%@include file="/libs/foundation/global.jsp"%><%
+<%@include file="/libs/foundation/global.jsp"%><%
 %><%@page session="false" %><%
 %><%
 	// TODO add you code here

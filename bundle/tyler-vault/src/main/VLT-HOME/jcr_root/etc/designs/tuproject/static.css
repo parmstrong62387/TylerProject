@@ -254,20 +254,14 @@ width: 1100px;
 #container-inner {
 float:left;
 background-color: #B2B2B2;
-position: relative;
-right:800px;
 }
 #sidebar {
 float: left;
 width: 174px;
-position: relative;
-left: 800px;
 }
 #content {
 float: left;
 width: 876px;
-position: relative;
-left: 800px;
 background-color: #B2B2B2;
 padding: 25px;
 min-height: 563px;
