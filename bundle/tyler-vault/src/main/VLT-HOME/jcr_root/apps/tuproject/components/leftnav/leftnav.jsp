@@ -1,25 +1,19 @@
-<%--
-
-  Header component.
-
-  Header for tuproject
-
---%><%
-%><%@include file="/libs/foundation/global.jsp"%><%
+<%@include file="/libs/foundation/global.jsp"%><%
 %><%@ page import="java.util.Iterator,
         com.day.cq.wcm.api.PageFilter,
-    	com.swx.core.leftnav.*"%>
+    	com.swx.core.leftnav.LeftNav"%>
 
 <% pageContext.setAttribute("leftNav", new LeftNav(currentPage)); %>
 <div class="leftnavcont"> 
+<ul>
 <c:forEach items="${leftNav.items}" var="leftNavItem">
 <c:if test="${leftNavItem.level == 0}"> 
-    <h6> <a href="${leftNavItem.link}" class="link">${leftNavItem.title}</a> </h6>
+    <li>
 </c:if>
-<ul>
 <c:if test="${leftNavItem.level == 1}">
-    <li><a href="${leftNavItem.link}" class="link">${leftNavItem.title}</a></li>
+    <li class="indentchild">
 </c:if>
-</ul>
+<a href="${leftNavItem.link}" class="link">${leftNavItem.title}</a></li>
 </c:forEach>
+</ul>    
 </div>
