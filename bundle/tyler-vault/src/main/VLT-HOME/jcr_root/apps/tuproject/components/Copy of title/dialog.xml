@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="200"
+    width="600"
+    xtype="dialog">
+    <items
+        jcr:primaryType="nt:unstructured"
+        xtype="tabpanel">
+        <items
+            jcr:primaryType="nt:unstructured"
+            title="Edit Wiki Page Title"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <title
+                    jcr:primaryType="nt:unstructured"
+                    blankText="Insert Wiki Page Title Here"
+                    fieldLabel="Wiki Page Title"
+                    name="./wikiPageTitle"
+                    validateOnBlur="true"
+                    xtype="textfield"/>
+            </items>
+        </items>
+    </items>
+</jcr:root>

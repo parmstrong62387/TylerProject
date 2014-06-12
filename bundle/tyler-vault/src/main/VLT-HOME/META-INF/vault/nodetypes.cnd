@@ -20,8 +20,8 @@
 [cq:Template] > mix:title, nt:hierarchyNode
   - * (undefined) multiple
   - allowedChildren (string) multiple
-  - allowedParents (string) multiple
   - ranking (long)
+  - allowedParents (string) multiple
   - * (undefined)
   + thumbnail.png (nt:file)
   + workflows (nt:base)
@@ -33,8 +33,8 @@
   mixin
   - cq:lastReplicatedBy (string) ignore
   - cq:lastPublished (date) ignore
-  - cq:lastReplicationStatus (string) ignore
   - cq:lastPublishedBy (string) ignore
+  - cq:lastReplicationStatus (string) ignore
   - cq:lastReplicationAction (string) ignore
   - cq:lastReplicated (date) ignore
 
@@ -91,13 +91,13 @@
 
 [cq:EditConfig] > nt:hierarchyNode, nt:unstructured
   orderable
-  - cq:dialogMode (string) < 'auto', 'floating', 'inline'
   - cq:emptyText (string)
+  - cq:dialogMode (string) < 'auto', 'floating', 'inline'
   - cq:layout (string) < 'editbar', 'rollover', 'auto'
   - cq:inherit (boolean)
   - cq:actions (string) multiple
-  + cq:inplaceEditing (cq:InplaceEditingConfig) = cq:InplaceEditingConfig
   + cq:actionConfigs (nt:base) = nt:unstructured
+  + cq:inplaceEditing (cq:InplaceEditingConfig) = cq:InplaceEditingConfig
   + cq:listeners (nt:base) = cq:EditListenersConfig
   + cq:formParameters (nt:base) = nt:unstructured
   + cq:dropTargets (nt:base) = nt:unstructured
@@ -105,11 +105,11 @@
 [cq:PageContent] > cq:OwnerTaggable, cq:ReplicationStatus, mix:created, mix:title, nt:unstructured, sling:Resource, sling:VanityPath
   orderable
   - cq:lastModified (date)
-  - cq:template (string)
   - pageTitle (string)
+  - cq:template (string)
   - offTime (date)
-  - hideInNav (boolean)
   - cq:lastModifiedBy (string)
+  - hideInNav (boolean)
   - onTime (date)
   - jcr:language (string)
   - cq:allowedTemplates (string) multiple
@@ -117,25 +117,25 @@
   - navTitle (string)
 
 [cq:Component] > mix:title, nt:folder, sling:ResourceSuperType
-  - dialogPath (string)
   - cq:noDecoration (boolean)
+  - dialogPath (string)
   - allowedChildren (string) multiple
-  - * (undefined)
   - cq:isContainer (boolean)
+  - * (undefined)
   - allowedParents (string) multiple
   - * (undefined) multiple
-  - cq:cellName (string)
   - componentGroup (string)
+  - cq:cellName (string)
   + dialog (nt:base) = nt:unstructured
-  + design_dialog (nt:base) = nt:unstructured
   + cq:htmlTag (nt:base) = nt:unstructured
+  + design_dialog (nt:base) = nt:unstructured
   + * (nt:base) = nt:base multiple version
   + cq:infoProviders (nt:base) = nt:unstructured
-  + cq:editConfig (cq:EditConfig) = cq:EditConfig
   + icon.png (nt:file)
+  + cq:editConfig (cq:EditConfig) = cq:EditConfig
   + cq:childEditConfig (cq:EditConfig) = cq:EditConfig
-  + thumbnail.png (nt:file)
   + virtual (nt:base) = sling:Folder
+  + thumbnail.png (nt:file)
 
 [cq:Page] > nt:hierarchyNode
   orderable primaryitem jcr:content
