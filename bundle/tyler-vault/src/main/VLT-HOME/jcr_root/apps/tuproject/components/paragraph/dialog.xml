@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Dialog"
+    cancelText=""
     height="400"
+    okText=""
+    title=""
     width="600"
     xtype="dialog">
     <items
         jcr:primaryType="nt:unstructured"
         xtype="tabpanel">
-        <items
-            jcr:primaryType="nt:unstructured"
-            title="Paragraph"
-            xtype="panel">
-            <items jcr:primaryType="cq:WidgetCollection">
-                <prop1
-                    jcr:primaryType="nt:unstructured"
-                    grow="false"
-                    hideLabel="true"
-                    name="./paragraph"
-                    validateOnBlur="true"
-                    xtype="textarea"/>
-            </items>
+        <items jcr:primaryType="cq:WidgetCollection">
+            <prop2
+                jcr:primaryType="nt:unstructured"
+                title="Paragraph"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <prop1
+                        jcr:primaryType="nt:unstructured"
+                        disabled="false"
+                        grow="true"
+                        hideLabel="true"
+                        name="./paragraph"
+                        readOnly="false"
+                        xtype="richtext"/>
+                </items>
+            </prop2>
         </items>
     </items>
 </jcr:root>

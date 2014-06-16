@@ -259,7 +259,7 @@ float: left;
 }
 #content {
 float:left;
-width: 889px;
+width: 877px;
 background-color: #B2B2B2;
 padding: 25px;
 min-height: 563px;
@@ -275,6 +275,7 @@ float: left;
 background-color: #C8C8CC;
 padding: 0;
 margin: 0;
+width: 170px;
 }
 div.leftnavcont {
 padding: 12px;

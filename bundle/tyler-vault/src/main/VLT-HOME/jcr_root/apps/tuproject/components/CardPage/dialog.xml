@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="400"
+    title="Card Page Dialog"
+    width="810"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <levelstats
+                jcr:primaryType="cq:Panel"
+                title="Levels/Stats"/>
+            <additional
+                jcr:primaryType="cq:Widget"
+                title="Additional Card Properties"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <multi
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Multi-field"
+                        hideLabel="{Boolean}true"
+                        name="./multi"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="nt:unstructured"
+                            optionsProvider="Ejst.x3.provideOptions2"
+                            xtype="ejstcustom"/>
+                    </multi>
+                </items>
+            </additional>
+            <level1
+                jcr:primaryType="cq:Widget"
+                cropParameter="./imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./fileName"
+                fileReferenceParameter="./fileReference"
+                mapParameter="./imageMap"
+                name="./file"
+                requestSuffix=".img.png"
+                rotateParameter="./imageRotate"
+                title="Level 1 Image"
+                xtype="html5smartimage"/>
+            <level2
+                jcr:primaryType="cq:Widget"
+                cropParameter="./imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./fileName"
+                fileReferenceParameter="./fileReference"
+                mapParameter="./imageMap"
+                name="./file"
+                requestSuffix=".img.png"
+                rotateParameter="./imageRotate"
+                title="Level 2 Image"
+                xtype="html5smartimage"/>
+            <level3
+                jcr:primaryType="cq:Widget"
+                cropParameter="./imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./fileName"
+                fileReferenceParameter="./fileReference"
+                mapParameter="./imageMap"
+                name="./file"
+                requestSuffix=".img.png"
+                rotateParameter="./imageRotate"
+                title="Level 3 Image"
+                xtype="html5smartimage"/>
+            <level4
+                jcr:primaryType="cq:Widget"
+                cropParameter="./imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./fileName"
+                fileReferenceParameter="./fileReference"
+                mapParameter="./imageMap"
+                name="./file"
+                requestSuffix=".img.png"
+                rotateParameter="./imageRotate"
+                title="Level 4 &#xa;Image"
+                xtype="html5smartimage"/>
+            <level5
+                jcr:primaryType="cq:Widget"
+                cropParameter="./imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./fileName"
+                fileReferenceParameter="./fileReference"
+                mapParameter="./imageMap"
+                name="./file"
+                requestSuffix=".img.png"
+                rotateParameter="./imageRotate"
+                title="Level 5 Image"
+                xtype="html5smartimage"/>
+            <level6
+                jcr:primaryType="cq:Widget"
+                cropParameter="./imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./fileName"
+                fileReferenceParameter="./fileReference"
+                mapParameter="./imageMap"
+                name="./file"
+                requestSuffix=".img.png"
+                rotateParameter="./imageRotate"
+                title="Level 6 Image"
+                xtype="html5smartimage"/>
+        </items>
+    </items>
+    <image.jsp jcr:primaryType="nt:file">
+        <jcr:content
+            jcr:data="{Binary}"
+            jcr:lastModified="{Date}2014-06-12T14:56:17.325-04:00"
+            jcr:lastModifiedBy="admin"
+            jcr:mimeType="text/plain"
+            jcr:primaryType="nt:resource"
+            jcr:uuid="50886435-320c-4ef5-b12b-df2049befa1b"/>
+    </image.jsp>
+    <tracking-js.jsp jcr:primaryType="nt:file">
+        <jcr:content
+            jcr:data="{Binary}"
+            jcr:lastModified="{Date}2014-05-28T09:35:37.008-04:00"
+            jcr:lastModifiedBy="admin"
+            jcr:mimeType="text/plain"
+            jcr:primaryType="nt:resource"
+            jcr:uuid="a75a26c1-3e18-4cff-9f0e-8b842fb1349d"/>
+    </tracking-js.jsp>
+    <cardpage.jsp jcr:primaryType="nt:file">
+        <jcr:content
+            jcr:data="{Binary}"
+            jcr:encoding="utf-8"
+            jcr:lastModified="{Date}2014-06-16T11:14:32.638-04:00"
+            jcr:lastModifiedBy="admin"
+            jcr:mimeType="text/plain"
+            jcr:primaryType="nt:resource"
+            jcr:uuid="7f8c5130-b65c-486f-a39a-0f2362b1fbce"/>
+    </cardpage.jsp>
+</jcr:root>

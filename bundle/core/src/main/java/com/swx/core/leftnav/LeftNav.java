@@ -2,7 +2,6 @@ package com.swx.core.leftnav;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
 import com.day.cq.wcm.api.Page;
 
 public class LeftNav {
