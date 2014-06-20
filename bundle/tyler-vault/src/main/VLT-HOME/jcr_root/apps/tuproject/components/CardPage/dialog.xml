@@ -19,13 +19,12 @@
                         fieldSubLabel="Enter the card statistics for each corresponding level"
                         hideLabel="{Boolean}false"
                         name="./map"
+                        orderable="{Boolean}false"
                         xtype="multifield">
                         <fieldConfig
                             jcr:primaryType="cq:Widget"
                             border="{Boolean}true"
-                            fieldLabel="Card Level 1"
                             height="127"
-                            hideLabel="{Boolean}false"
                             layout="absolute"
                             padding="3px"
                             xtype="mymultipanel">
@@ -38,16 +37,16 @@
                                     y="10"/>
                                 <levelvalue
                                     jcr:primaryType="cq:Widget"
-                                    disabled="{Boolean}true"
                                     dName="levelValue"
-                                    width="35"
+                                    readOnly="{Boolean}true"
+                                    width="15"
                                     x="46"
                                     xtype="textfield"
                                     y="7"/>
                                 <attack
                                     jcr:primaryType="cq:Widget"
                                     text="Attack:"
-                                    x="88"
+                                    x="68"
                                     xtype="label"
                                     y="10"/>
                                 <attackvalue
@@ -55,13 +54,13 @@
                                     dName="attackValue"
                                     emptyText="0"
                                     width="35"
-                                    x="132"
+                                    x="112"
                                     xtype="textfield"
                                     y="7"/>
                                 <health
                                     jcr:primaryType="cq:Widget"
                                     text="Health:"
-                                    x="174"
+                                    x="154"
                                     xtype="label"
                                     y="10"/>
                                 <healthvalue
@@ -69,13 +68,13 @@
                                     dName="healthValue"
                                     emptyText="0"
                                     width="35"
-                                    x="217"
+                                    x="197"
                                     xtype="textfield"
                                     y="7"/>
                                 <delay
                                     jcr:primaryType="cq:Widget"
                                     text="Delay:"
-                                    x="259"
+                                    x="239"
                                     xtype="label"
                                     y="10"/>
                                 <delayvalue
@@ -83,7 +82,7 @@
                                     dName="delayValue"
                                     emptyText="0"
                                     width="35"
-                                    x="295"
+                                    x="275"
                                     xtype="textfield"
                                     y="7"/>
                                 <skill1
@@ -522,15 +521,182 @@
                         </fieldConfig>
                         <listeners
                             jcr:primaryType="nt:unstructured"
-                            afterlayout="function() {&#xa;&#x9;var index = 1;&#xa;&#x9;this.items.each(function(i){&#xa;&#x9;&#x9;if (typeof i.field !== 'undefined' &amp;&amp; i.hasOwnProperty('xtype') &amp;&amp; i.xtype === 'multifielditem') {&#xa;&#x9;&#x9;&#x9;var field = i.field;&#xa;&#x9;&#x9;&#x9;if (typeof field.items !== 'undefined') {&#xa;&#x9;&#x9;&#x9;&#x9;field.items.each(function(j) {&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;if (j.hasOwnProperty('dName') &amp;&amp; j.dName === 'levelValue') {&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;j.setValue(index++);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;});&#xa;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;}&#xa;&#x9;});&#xa;}"
-                            remove="function() {&#xa;&#x9;var index = 1;&#xa;&#x9;this.items.each(function(i){&#xa;&#x9;&#x9;if (typeof i.field !== 'undefined' &amp;&amp; i.hasOwnProperty('xtype') &amp;&amp; i.xtype === 'multifielditem') {&#xa;&#x9;&#x9;&#x9;var field = i.field;&#xa;&#x9;&#x9;&#x9;if (typeof field.items !== 'undefined') {&#xa;&#x9;&#x9;&#x9;&#x9;field.items.each(function(j) {&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;if (j.hasOwnProperty('dName') &amp;&amp; j.dName === 'levelValue') {&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;j.setValue(index++);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;});&#xa;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;}&#xa;&#x9;});&#xa;}"/>
+                            afterLayout="function() {&#xa;&#x9;var index = 1;&#xa;&#x9;this.items.each(function(i){&#xa;&#x9;if (typeof i.field !== 'undefined' &amp;&amp; i.hasOwnProperty('xtype') &amp;&amp; i.xtype === 'multifielditem') {&#xa;&#x9;&#x9;var field = i.field;&#xa;&#x9;&#x9;if (typeof field.items !== 'undefined') {&#xa;&#x9;&#x9;&#x9;field.items.each(function(j) {&#xa;&#x9;&#x9;&#x9;&#x9;if (j.hasOwnProperty('dName') &amp;&amp; j.dName === 'levelValue') {&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;j.setValue(index++);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;});&#xa;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;}&#xa;&#x9;});&#xa;}"
+                            remove="function() {&#xa;&#x9;var index = 1;&#xa;&#x9;this.items.each(function(i){&#xa;&#x9;if (typeof i.field !== 'undefined' &amp;&amp; i.hasOwnProperty('xtype') &amp;&amp; i.xtype === 'multifielditem') {&#xa;&#x9;&#x9;var field = i.field;&#xa;&#x9;&#x9;if (typeof field.items !== 'undefined') {&#xa;&#x9;&#x9;&#x9;field.items.each(function(j) {&#xa;&#x9;&#x9;&#x9;&#x9;if (j.hasOwnProperty('dName') &amp;&amp; j.dName === 'levelValue') {&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;j.setValue(index++);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;});&#xa;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;}&#xa;&#x9;});&#xa;}"/>
                     </multi>
                 </items>
             </levelstats>
             <additional
                 jcr:primaryType="cq:Widget"
+                layout="absolute"
                 title="Additional Card Properties"
-                xtype="panel"/>
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <type
+                        jcr:primaryType="cq:Widget"
+                        text="Type:"
+                        x="20"
+                        xtype="label"
+                        y="14"/>
+                    <typeselection
+                        jcr:primaryType="cq:Widget"
+                        border="{Boolean}false"
+                        dName="type"
+                        name="./type"
+                        type="select"
+                        x="70"
+                        xtype="selection"
+                        y="10">
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            loadcontent="function(){this.findParentByType('tabpanel').manageTabs(this.getValue(),true);}"
+                            selectionchanged="function(box,value){box.findParentByType('tabpanel').manageTabs(value);}"/>
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <assault
+                                jcr:primaryType="nt:unstructured"
+                                text="Assault"
+                                value="assault"/>
+                            <structure
+                                jcr:primaryType="nt:unstructured"
+                                text="Structure"
+                                value="structure"/>
+                            <commander
+                                jcr:primaryType="nt:unstructured"
+                                text="Commander"
+                                value="commander"/>
+                        </options>
+                    </typeselection>
+                    <rarity
+                        jcr:primaryType="cq:Widget"
+                        text="Rarity:"
+                        x="20"
+                        xtype="label"
+                        y="44"/>
+                    <rarityselection
+                        jcr:primaryType="cq:Widget"
+                        border="{Boolean}false"
+                        dName="rarity"
+                        fieldLabel="Rarity:"
+                        name="./rarity"
+                        type="select"
+                        x="70"
+                        xtype="selection"
+                        y="40">
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            loadcontent="function(){this.findParentByType('tabpanel').manageTabs(this.getValue(),true);}"
+                            selectionchanged="function(box,value){box.findParentByType('tabpanel').manageTabs(value);}"/>
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <common
+                                jcr:primaryType="nt:unstructured"
+                                text="Common"
+                                value="common"/>
+                            <rare
+                                jcr:primaryType="nt:unstructured"
+                                text="Rare"
+                                value="Rare"/>
+                            <epic
+                                jcr:primaryType="nt:unstructured"
+                                text="Epic"
+                                value="Epic"/>
+                            <legendary
+                                jcr:primaryType="nt:unstructured"
+                                text="Legendary"
+                                value="legendary"/>
+                            <vindicator
+                                jcr:primaryType="nt:unstructured"
+                                text="Vindicator"
+                                value="vindicator"/>
+                        </options>
+                    </rarityselection>
+                    <faction
+                        jcr:primaryType="cq:Widget"
+                        text="Faction:"
+                        x="20"
+                        xtype="label"
+                        y="74"/>
+                    <factionselection
+                        jcr:primaryType="cq:Widget"
+                        border="{Boolean}false"
+                        dName="faction"
+                        fieldLabel="Faction:"
+                        name="./faction"
+                        type="select"
+                        x="70"
+                        xtype="selection"
+                        y="70">
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            loadcontent="function(){this.findParentByType('tabpanel').manageTabs(this.getValue(),true);}"
+                            selectionchanged="function(box,value){box.findParentByType('tabpanel').manageTabs(value);}"/>
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <bloodthirsty
+                                jcr:primaryType="nt:unstructured"
+                                text="Bloodthirsty"
+                                value="bloodthirsty"/>
+                            <imperial
+                                jcr:primaryType="nt:unstructured"
+                                text="Imperial"
+                                value="imperial"/>
+                            <raider
+                                jcr:primaryType="nt:unstructured"
+                                text="Raider"
+                                value="raider"/>
+                            <righteous
+                                jcr:primaryType="nt:unstructured"
+                                text="Righteous"
+                                value="righteous"/>
+                            <xeno
+                                jcr:primaryType="nt:unstructured"
+                                text="Xeno"
+                                value="xeno"/>
+                            <progenitor
+                                jcr:primaryType="nt:unstructured"
+                                text="Progenitor"
+                                value="progenitor"/>
+                        </options>
+                    </factionselection>
+                    <set
+                        jcr:primaryType="cq:Widget"
+                        text="Set:"
+                        x="20"
+                        xtype="label"
+                        y="104"/>
+                    <setselection
+                        jcr:primaryType="cq:Widget"
+                        border="{Boolean}false"
+                        dName="set"
+                        fieldLabel="Set:"
+                        name="./set"
+                        type="select"
+                        x="70"
+                        xtype="selection"
+                        y="100">
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            loadcontent="function(){this.findParentByType('tabpanel').manageTabs(this.getValue(),true);}"
+                            selectionchanged="function(box,value){box.findParentByType('tabpanel').manageTabs(value);}"/>
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <event
+                                jcr:primaryType="nt:unstructured"
+                                text="Event"
+                                value="event"/>
+                            <fusion
+                                jcr:primaryType="nt:unstructured"
+                                text="Fusion"
+                                value="fusion"/>
+                            <reward
+                                jcr:primaryType="nt:unstructured"
+                                text="Reward"
+                                value="reward"/>
+                            <standard
+                                jcr:primaryType="nt:unstructured"
+                                text="Standard"
+                                value="standard"/>
+                        </options>
+                    </setselection>
+                </items>
+            </additional>
             <basic
                 jcr:primaryType="cq:Widget"
                 path="/libs/foundation/components/page/tab_basic.infinity.json"
