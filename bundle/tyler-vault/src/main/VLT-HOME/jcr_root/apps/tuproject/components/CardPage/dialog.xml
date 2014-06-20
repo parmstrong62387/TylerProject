@@ -42,7 +42,7 @@
                                     dName="levelValue"
                                     width="35"
                                     x="46"
-                                    xtype="label"
+                                    xtype="textfield"
                                     y="7"/>
                                 <attack
                                     jcr:primaryType="cq:Widget"
@@ -522,8 +522,8 @@
                         </fieldConfig>
                         <listeners
                             jcr:primaryType="nt:unstructured"
-                            afterLayout="function() {&#xa;    var index = 0;&#xa;    this.items.each(function(i){&#xa;        if (typeof i.field !== 'undefined' &amp;&amp; i.hasOwnProperty('xtype') &amp;&amp; i.xtype === 'multifielditem') {&#xa;            var field = i.field;&#xa;            if (typeof field.items !== 'undefined') {&#xa;                index++;&#xa;                field.items.each(function(j) {&#xa;                    if (j.hasOwnProperty('dName') &amp;&amp; j.dName === 'levelValue') {&#xa;                        j.setValue(index);&#xa;                    }&#xa;                });&#xa;            }&#xa;        }&#xa;    });&#xa;}"
-                            remove="function() {&#xa;    var index = 0;&#xa;    this.items.each(function(i){&#xa;        if (typeof i.field !== 'undefined' &amp;&amp; i.hasOwnProperty('xtype') &amp;&amp; i.xtype === 'multifielditem') {&#xa;            var field = i.field;&#xa;            if (typeof field.items !== 'undefined') {&#xa;                index++;&#xa;                field.items.each(function(j) {&#xa;                    if (j.hasOwnProperty('dName') &amp;&amp; j.dName === 'levelValue') {&#xa;                        j.setValue(index);&#xa;                    }&#xa;                });&#xa;            }&#xa;        }&#xa;    });&#xa;}"/>
+                            afterlayout="function() {&#xa;&#x9;var index = 1;&#xa;&#x9;this.items.each(function(i){&#xa;&#x9;&#x9;if (typeof i.field !== 'undefined' &amp;&amp; i.hasOwnProperty('xtype') &amp;&amp; i.xtype === 'multifielditem') {&#xa;&#x9;&#x9;&#x9;var field = i.field;&#xa;&#x9;&#x9;&#x9;if (typeof field.items !== 'undefined') {&#xa;&#x9;&#x9;&#x9;&#x9;field.items.each(function(j) {&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;if (j.hasOwnProperty('dName') &amp;&amp; j.dName === 'levelValue') {&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;j.setValue(index++);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;});&#xa;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;}&#xa;&#x9;});&#xa;}"
+                            remove="function() {&#xa;&#x9;var index = 1;&#xa;&#x9;this.items.each(function(i){&#xa;&#x9;&#x9;if (typeof i.field !== 'undefined' &amp;&amp; i.hasOwnProperty('xtype') &amp;&amp; i.xtype === 'multifielditem') {&#xa;&#x9;&#x9;&#x9;var field = i.field;&#xa;&#x9;&#x9;&#x9;if (typeof field.items !== 'undefined') {&#xa;&#x9;&#x9;&#x9;&#x9;field.items.each(function(j) {&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;if (j.hasOwnProperty('dName') &amp;&amp; j.dName === 'levelValue') {&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;j.setValue(index++);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;});&#xa;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;}&#xa;&#x9;});&#xa;}"/>
                     </multi>
                 </items>
             </levelstats>
